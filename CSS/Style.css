@@ -1,0 +1,671 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+/*_______________________Criando variaveis____________________________________*/
+:root {
+  --bg-color: #2a2a2a;
+  --second-bg-color: #202020;
+  --text-color: #fff;
+  --second-color: #ccc;
+  --main-color: #ff4d05;
+  --big-font: 5rem;
+  --h2-font: 3rem;
+  --p-font: 1.1rem;
+}
+
+/*_______________________________________Confirgurando todo o corpo do site______________________*/
+body {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+/*___________________________________Configurando o cabeçalho__________________________________*/
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 22px 15%;
+  border-bottom: 1px solid transparent;
+  transition: all 0.45s ease;
+}
+
+/*Configurando a logo do cabeçalho*/
+.logo {
+  color: var(--text-color);
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+span {
+  color: #03fa6e;
+}
+
+/*Configurando o menu do cabeçalho - Colocando a cor*/
+.navlist {
+  display: flex;
+}
+
+/*Configurando o menu do cabeçalho - Alinhando o menu*/
+.navlist a {
+  color: var(--second-color);
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 25px;
+  transition: all 0.45s ease;
+}
+
+/*Configurando o menu do cabeçalho - Mudando a cor do texto do menu ao passar o mouse*/
+.navlist a:hover {
+  color: #ff4d05;
+}
+
+/*Configurando o menu do cabeçalho - Deixando somente o texto home em outra cor*/
+.navlist a.active {
+  color: #03fa6e;
+}
+
+/*Configurando o menu do cabeçalho - Configurando o botão menu*/
+#menu-icon {
+  font-size: 35px;
+  color: var(--text-color);
+  z-index: 10001;
+  cursor: pointer;
+  margin-left: 25px;
+  display: none; /*ocurta o botão para pc - vizivel somente para celular */
+}
+
+/*___________________________________________Configuração da Seção Home______________________________*/
+section {
+  padding: 160px 15% 120px;
+}
+
+/*Configuração da Seção Home - Background e o texto*/
+.home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../Img/Background-gif.gif); /*Foto*/
+  background: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/*Configuração da Seção Home - Separação do texto*/
+.slide {
+  margin-bottom: 20px;
+}
+
+/*Configuração da Seção Home - do texo hello (Ola!)*/
+.one {
+  display: inline-block;
+  margin-right: 15px;
+  height: 32px;
+  padding: 0 15px;
+  line-height: 32px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 5px;
+  background: #5519cb;
+  color: var(--text-color);
+}
+
+/*Configuração da Seção Home - do texto I'M (Eu sou)*/
+.two {
+  display: inline-block;
+  color: var(--second-color);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/*Configuração da Seção Home - Titulo (nome) */
+.home-text h1 {
+  font-size: var(--big-font);
+  font-weight: 700;
+  color: var(--text-color);
+  line-height: 1.1;
+  margin: 0 0 8px;
+}
+
+/*Configuração da Seção Home - Sub titulo */
+.home-text h3 {
+  color: var(--text-color);
+  margin: 0 0 35px;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+/*Configuração da Seção Home - Paragrafo  */
+.home-text p {
+  color: var(--second-color);
+  font-size: var(--p-font);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/*Configuração da Seção Home - Botões */
+.button {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Configuração da Seção Home - Botõe 1 */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #ff4d05;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: all 0.45s ease;
+}
+/*Configuração da Seção Home - Botõe 1 se mover ao passar o mouse */
+.btn:hover {
+  transform: scale(0.9);
+}
+/*Configuração da Seção Home - Botõe 2*/
+.btn2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #03fa6e;
+  margin-left: 35px;
+}
+
+.btn2 span i {
+  height: 55px;
+  width: 55px;
+  background: #5519cb;
+  color: var(--text-color);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  border-radius: 50%;
+  margin-right: 15px;
+  transition: all 0.45s ease;
+}
+
+.btn2 span i:hover {
+  transform: scale(1.1) translateY(5px);
+}
+
+header.sticky {
+  background: var(--bg-color);
+  border-bottom: 1px solid #ffffff1a;
+  padding: 12px 15%;
+}
+
+/*___________________________________Confirguração About___________________________________________*/
+/*Para configurar o texto do About*/
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/*Para definir o tamanho da imagen do About*/
+.about-img img {
+  max-width: 530px;
+  height: auto;
+  width: 100%;
+  border-radius: 50px;
+}
+
+/*Para definir o tamanho do texto do About*/
+.about-text h2 {
+  font-size: var(--h2-font);
+  line-height: 1;
+}
+
+.about-text h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-color);
+  line-height: 1.7;
+  margin: 15px 0 30px;
+}
+
+.about-text p {
+  color: var(--second-color);
+  font-size: var(--p-font);
+  line-height: 1.8;
+  margin-bottom: 4rem;
+}
+
+/*________________________________Configurações de Serviços_____________________________________*/
+
+/*Cofirgurando o background*/
+.services {
+  background: var(--second-bg-color);
+}
+
+/*Cofirgurando a centralização do titulo - serviços*/
+.main-text {
+  text-align: center;
+}
+
+.main-text p {
+  color: var(--second-color);
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.main-text h2 {
+  font-size: var(--h2-font);
+  line-height: 1;
+}
+
+/*Cofirgurando a centralização - serviços*/
+.services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 5rem;
+}
+
+.box {
+  background: var(--bg-color);
+  padding: 35px 45px;
+  border-radius: 20px;
+  transition: all 0.45s ease;
+}
+
+/*Configurar os icones*/
+.s-icons {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/*Configurar os titulo - serviços*/
+.box h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+/*Configurar os paragrafo - serviços*/
+.box p {
+  color: var(--second-color);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/*Configurando o botão*/
+.read {
+  display: inline-block;
+  padding: 8px 18px;
+  background: #333333;
+  color: var(--second-color);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.45s ease;
+}
+
+.read:hover {
+  letter-spacing: 1px;
+  background: #ffffff99;
+  color: var(--text-color);
+}
+
+.box:hover {
+  transform: translateY(-8px);
+  cursor: pointer;
+}
+
+/*________________________________Configurações de Projetos_____________________________________*/
+
+/*Configurando em colunas*/
+.portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 5rem;
+}
+
+/*Configuranção para separar as colunas*/
+.row {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/*Configuração das Imagens do projetos*/
+.row img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+/*Configurando o layer do projeto*/
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), #03fa6e);
+  position: absolute;
+  border-radius: 8px;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 40px;
+  transition: height 0.5s;
+}
+
+/*Configurando o titulo do projeto*/
+.layer h5 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/*Configurando a descrição do projeto*/
+.layer p {
+  color: var(--second-color);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/*Configurando o botão do projeto*/
+.layer i {
+  color: var(--main-color);
+  margin-top: 20px;
+  font-size: 20px;
+  background: var(--text-color);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/*Configurando a animação da imagens do projeto*/
+.row:hover img {
+  transform: scale(1.1);
+}
+
+/*Configurando a animação do layer*/
+.row:hover .layer {
+  height: 100%;
+}
+
+/*________________________________Configurações de Contatos_____________________________________*/
+
+/*Configurando o Backgroud e as colunas*/
+.contact {
+  background: var(--second-bg-color);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 5rem;
+}
+
+/*Configurando o subtitulo*/
+.contact-text h4 {
+  color: var(--text-color);
+  margin: 18px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/*Configurando o Titulo*/
+.contact-text h2 {
+  font-size: var(--h2-font);
+  line-height: 1;
+}
+
+/*Configurando o paragafro*/
+.contact-text p {
+  color: var(--p-font);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/*Configurando a lista*/
+.list {
+  margin-bottom: 2.8rem;
+}
+
+.list li {
+  margin-bottom: 12px;
+}
+
+.list li a {
+  display: block;
+  color: var(--second-color);
+  font-size: 14px;
+  transition: all 0.45s ease;
+}
+
+/*Configuração da animação da lista*/
+.list li a:hover {
+  color: #03fa6e;
+  transform: translateX(5px);
+}
+
+/*Configurando os icones*/
+.contact-icons i {
+  height: 45px;
+  width: 45px;
+  background: var(--main-color);
+  color: var(--text-color);
+  font-size: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  margin-right: 15px;
+  transition: all 0.45s ease;
+}
+
+/*Configurando animação dos icones*/
+.contact-icons i:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background: var(--text-color);
+  color: var(--main-color);
+}
+
+/*___Configurando o Formulario____*/
+.contact-form {
+  position: relative;
+}
+
+/*Configurando o form*/
+.contact-form form input,
+form textarea {
+  width: 100%;
+  padding: 14px;
+  background: var(--bg-color);
+  color: var(--text-color);
+
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 240px;
+}
+
+/*Configuração do botão enviar*/
+.contact-form .submit {
+  display: inline-block;
+  font-size: 16px;
+  background: var(--main-color);
+  color: var(--text-color);
+  width: 190px;
+  transition: all 0.45s ease;
+}
+
+.contact-form .submit:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background: var(--text-color);
+  color: var(--main-color);
+}
+
+/*________________________________Configurações final (Rodapé)_____________________________________*/
+
+/*Configurando a Seção fim*/
+.end {
+  padding: 20px 15%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: var(--bg-color);
+}
+
+/*Configurando o texto dos direitos*/
+.last-text p {
+  color: var(--second-color);
+  font-size: 14px;
+}
+.last-text p a {
+  color: var(--second-color);
+}
+/*Configurando do botão top*/
+.top i {
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  color: var(--text-color);
+  background: var(--main-color);
+}
+
+/*________________________________Configurações redmencionar o sistema_____________________________________*/
+@media (max-width: 1480px) {
+  header {
+    padding: 12px 2.5%;
+    transition: 0.1s;
+  }
+
+  header.sticky {
+    padding: 10px 2.5%;
+    transition: 0.1s;
+  }
+
+  section {
+    padding: 110px 3% 60px;
+  }
+
+  .end {
+    padding: 15px 3%;
+  }
+}
+
+@media (max-width: 1100px) {
+  :root {
+    --big-font: 4rem;
+    --h2-font: 2.5rem;
+    --p-font: 1rem;
+    transition: 0.1s;
+  }
+
+  .home-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .home {
+    height: 87vh;
+  }
+}
+
+@media (max-width: 920px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-img {
+    text-align: center;
+    order: 2;
+  }
+  .about-img img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 840px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .navlist {
+    position: absolute;
+    top: 1000px;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color);
+    text-align: left;
+    transition: all 0.45s ease;
+  }
+
+  .navlist a {
+    display: block;
+    margin: 17px;
+    font-size: 20px;
+    transition: all 0.45s ease;
+    color: var(--text-color);
+  }
+
+  .navlist a:hover {
+    color: var(--main-color);
+  }
+
+  .navlist a.active {
+    color: var(--text-color);
+  }
+
+  .navlist.open {
+    top: 100%;
+  }
+}
